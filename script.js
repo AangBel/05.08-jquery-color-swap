@@ -8,22 +8,22 @@ function onReady() {
 
 //When this function is called i want it to do...
 function generateRow(event) {
-  const rowOneColor = $("#rowOne-btn");
-//   const rowTwoColor = $("#rowTwoColor");
-//   const rowThreeColor = $("#rowThreeColor");
-//   const rowFourColor = $("#rowFourColor");
+  const rowOneColorVar = $("#rowOne-btn");
+  const rowTwoColorVar = $("#rowTwoColor");
+  const rowThreeColorVar = $("#rowThreeColor");
+  const rowFourColorVar = $("#rowFourColor");
+
+
+
+$("#rowOneColorVar").on("click", ".block", rowOneColorAppend );
+$("#rowOneColor").on("click", ".block", rowOneColorAppend);
+$("#rowTwoColor").on("click", ".block", rowTwoColorAppend);
+$("#rowThreeColor").on("click", ".block", rowThreeColorAppend);
+$("#rowFourColor").on("click", ".block", rowFourColorAppend);
 
   event.preventDefault();
 } //end of function generate row
  //---------------------------------------------------------------
-
-
-
- 
-$("#rowOneColor").on("click", rowOneColorAppend);
-$("#rowTwoColor").on("click", rowTwoColorAppend);
-$("#rowThreeColor").on("click", rowThreeColorAppend);
-$("#rowFourColor").on("click", rowFourColorAppend);
 
 function rowOneColorAppend() {
   $("#rowOneColor").append('<div class="block red-fill"></div>');
@@ -31,17 +31,22 @@ function rowOneColorAppend() {
   // $('#red-count').append(red);
 }
 function rowTwoColorAppend() {
-  $("#rowTwoColor").append('<div class="block blue-fill"></div>');
+  $("#rowTwoColor").append('<div class="block red-fill"></div>');
   // blue++;
   // blueCount();
 }
 function rowThreeColorAppend() {
-  $("#rowThreeColor").append('<div class="block green-fill"></div>');
+  $("#rowThreeColor").append('<div class="block red-fill"></div>');
   // green++;
   // greenCount();
 }
 function rowFourColorAppend() {
-  $("#rowFourColor").append('<div class="block yellow-fill"></div>');
+  $("#rowFourColor").append('<div class="block red-fill"></div>');
   //     yellow++;
   //     yellowCount();
 }
+
+
+// <!------------make it display a number (that changes when Generate is clicked)---->
+    
+//       <!-- first row --- make a yellow button ---->

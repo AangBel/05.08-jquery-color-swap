@@ -6,7 +6,12 @@
 
 /*------BLOCK------------*/
 
-
+#blocks {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
 .block {
   display: inline-block;
   width: 100px;
