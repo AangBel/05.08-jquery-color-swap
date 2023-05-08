@@ -3,6 +3,21 @@
   margin: 30px;
 }
 
+
+/*------BLOCK------------*/
+
+
+.block {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.red-fill {
+  background-color: red;
+}
+
 /*FIRST ROW-------------------*/
 #rowOne-btn {
   padding: 10px;
