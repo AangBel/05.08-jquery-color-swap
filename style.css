@@ -1,0 +1,62 @@
+#generate-btn {
+  padding: 10px;
+  margin: 30px;
+}
+
+/*FIRST ROW-------------------*/
+#rowOne-btn {
+  padding: 10px;
+  margin: 30px;
+  margin-right: 0px;
+  margin-top: 80px;
+}
+
+#rowOne-delete-btn {
+  padding: 10px;
+  margin: 50px;
+  margin-left: 0px;
+}
+
+/*Second ROW-------------------*/
+
+#rowTwo-btn {
+  padding: 10px;
+  margin: 30px;
+  margin-right: 0px;
+  margin-top: 80px;
+}
+
+#rowTwo-delete-btn {
+  padding: 10px;
+  margin: 50px;
+  margin-left: 0px;
+}
+/*Third ROW-------------------*/
+
+#rowThree-btn {
+  padding: 10px;
+  margin: 30px;
+  margin-right: 0px;
+  margin-top: 80px;
+}
+
+#rowThree-delete-btn {
+  padding: 10px;
+  margin: 50px;
+  margin-left: 0px;
+}
+
+/*Fourth ROW-------------------*/
+
+#rowFour-btn {
+  padding: 10px;
+  margin: 30px;
+  margin-right: 0px;
+  margin-top: 80px;
+}
+
+#rowFour-delete-btn {
+  padding: 10px;
+  margin: 50px;
+  margin-left: 0px;
+}
