@@ -18,21 +18,22 @@ function onReady() {
   $("#rowThree-btn").on("click", ".yellow-btn", changeColor);
   $("#rowFour-btn").on("click", ".yellow-btn", changeColor);
 
+  $('#yellow-btn').on('click', change2Yellow);
   $("#container").on("click", ".delete-btn", deleteRow);
 }
 
 let rowCounter = 1;
 
 function generateRow() {
- 
+
   $("#firstContainer").append(`
     <div class="row" data-row="${rowCounter}">
     <section style="background-color: red")
-      <p>Row ${rowCounter}</p>
-      <button class="yellow-btn">Yellow</button>
+      <p>${rowCounter}</p>
+      <button id="yellow-btn">Yellow</button>
       <button class="delete-btn">Delete</button>
     </div>
-   `);
+`);
   rowCounter++;
   console.log(generateRow);
 }
@@ -44,6 +45,10 @@ function changeColor() {
   console.log(changeColor);
 }
 
+function change2Yellow() {
+  $(this).parent().append("yellow-fill");
+  console.log(change2Yellow);
+}
 function deleteRow() {
   $(this).parent().remove();
   rowCounter--;
