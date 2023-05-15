@@ -1,54 +1,125 @@
 $(document).ready(onReady);
-//when this button is clicked ...
+
 function onReady() {
-  console.log("I got this.");
+  
+  // let generateBtn = $("#generate-btn");
+
+  // let rowOneBtn = $("#rowOne-btn");
+  // let rowTwoBtn = $("#rowTwo-btn");
+  // let rowThreeBtn = $("#rowThree-btn");
+  // let rowFourBtn = $("#rowFour-btn");
+
+  // let deleteBtn = $("#delete-btn");
 
   $("#generate-btn").on("click", generateRow);
-} //end of onReady
 
-$('#generate-btn').on('click', )
+  $("#rowOne-btn").on("click", ".yellow-btn", changeColor);
+  $("#rowTwo-btn").on("click", ".yellow-btn", changeColor);
+  $("#rowThree-btn").on("click", ".yellow-btn", changeColor);
+  $("#rowFour-btn").on("click", ".yellow-btn", changeColor);
 
-//When this function is called i want it to do...
-function generateRow(event) {
-  const rowOneColorVar = $("#rowOne-btn");
-  const rowTwoColorVar = $("#rowTwoColor");
-  const rowThreeColorVar = $("#rowThreeColor");
-  const rowFourColorVar = $("#rowFourColor");
-
-
-
-$("#rowOne-btn").on("click", ".block", rowOneColorAppend );
-// $("#rowTwoColor").on("click", ".block", rowOneColorAppend);
-$("#rowTwoColor").on("click", ".block", rowTwoColorAppend);
-$("#rowThreeColor").on("click", ".block", rowThreeColorAppend);
-$("#rowFourColor").on("click", ".block", rowFourColorAppend);
-
-  event.preventDefault();
-} //end of function generate row
- //---------------------------------------------------------------
-
-function rowOneColorAppend() {
-  $("#firstContainer").append('<div class="block red-fill"></div>');
-  // red++;
-  // $('#red-count').append(red);
-}
-function rowTwoColorAppend() {
-  $("#secondContainer").append('<div class="block red-fill"></div>');
-  // blue++;
-  // blueCount();
-}
-function rowThreeColorAppend() {
-  $("#thirdContainer").append('<div class="block red-fill"></div>');
-  // green++;
-  // greenCount();
-}
-function rowFourColorAppend() {
-  $("#fourthContainer").append('<div class="block red-fill"></div>');
-  //     yellow++;
-  //     yellowCount();
+  $("#container").on("click", ".delete-btn", deleteRow);
 }
 
+let rowCounter = 1;
 
-// <!------------make it display a number (that changes when Generate is clicked)---->
-    
-//       <!-- first row --- make a yellow button ---->
+function generateRow() {
+  $("block").on("click", changeColor);
+  $("#firstContainer").append(`
+    <div class="row" data-row="${rowCounter}">
+      <p>Row ${rowCounter}</p>
+      <button class="yellow-btn">Yellow</button>
+      <button class="delete-btn">Delete</button>
+      $(.block).on("click", changeColor);
+    </div>
+  `);
+  rowCounter++;
+  
+}
+// rowFourBtn
+
+function changeColor() {
+  $(this).parent().addClass("red-fill");
+}
+
+function deleteRow() {
+  $(this).parent().remove();
+  rowCounter--;
+  }
+
+// function onReady() {
+//   console.log("I got this.");
+
+//   $("#generate-btn").on("click", function () {
+//     const div = $("<div></div>").addClass("block red-fill");
+//     // Append the div to the appropriate container
+//     $("#firstContainer").append(div);
+
+//   });
+//   $('#generate-btn').on('click', function () {
+//     const div = $('<div></div>').addClass('block red-fill');
+// })
+
+//   $("#generate-btn").on("click", rowTwoColorAppend);
+//   $("#generate-btn").on("click", rowThreeColorAppend);
+//   $("#generate-btn").on("click", rowFourColorAppend);
+//   } 
+
+
+//   $("#rowOne-btn").on("click", ".block", rowOneColorAppend);
+//   // $("#rowTwoColor").on("click", ".block", rowOneColorAppend);
+//   $("#rowTwoColor").on("click", ".block", rowTwoColorAppend);
+//   $("#rowThreeColor").on("click", ".block", rowThreeColorAppend);
+//   $("#rowFourColor").on("click", ".block", rowFourColorAppend);
+
+//   event.preventDefault();
+//  //end of onReady 
+// //end of function generate row
+// //---------------------------------------------------------------
+// //I want a red block section to appear when the rowOne button is clicked
+// function rowOneColorAppend() {
+//   //here i want to append a div with a class of block and red-fill
+//   // $("#firstContainer").append(`
+//   // <div class="block red-fill"></div>
+  
+//   // `);
+
+//   // ${'#first'}
+
+
+//   $("#firstContainer").append(`<div class="block color-fill"></div>`);
+
+// } //end of rowOneColorAppend
+// //I want a blue block section to appear when the rowTwo button is clicked
+// //what do i do to make the blue appear?
+// function rowTwoColorAppend() {
+//   //why is the line 43 not working?
+//   $("#secondContainer").append(`
+//   <div class="block red-fill"></div>
+
+ 
+//   `);
+//   // blue++;
+//   // blueCount();
+// }
+// //I want a green block section to appear when the rowThree button is clicked
+// //why does line 49 have the red underlined?
+// function rowThreeColorAppend() {
+//   $("#thirdContainer").append(`
+//   <div class="block red-fill"></div>
+//   `);
+//   // green++;
+//   // greenCount();
+// }
+// //I want a yellow block section to appear when the rowFour button is clicked
+// function rowFourColorAppend() {
+//   $("#fourthContainer").append(`
+//   <div class="block red-fill"></div>
+//   `);
+//   //     yellow++;
+//   //     yellowCount();
+// }
+
+// // <!------------make it display a number (that changes when Generate is clicked)---->
+
+// //       <!-- first row --- make a yellow button ---->

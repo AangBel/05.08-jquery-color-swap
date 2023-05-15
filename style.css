@@ -3,38 +3,50 @@
   margin: 30px;
 }
 
-#firstContainer,
-#secondContainer,
-#thirdContainer,
-#fourthContainer {
-  display: inline-block;
-  border: 2px solid black;
-  width: 80%;
-  height:106px;
-  padding: 10px;
-  margin: 22px;
+.container {
+  /* display: inline-block; */
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+
 } /*end of containers•/
 /*------BLOCK------------*/
 
-/* #blocks {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.block {
+#block {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin: 5px;
-  background-color: yellow;
-} */
-
-.red-fill {
   background-color: red;
 }
 
-/*FIRST ROW-------------------*/
+
+#yellowBtn {
+  background-color: yellow;
+}
+
+/* #red-fill {
+  
+} */
+
+
+/* .btn {
+  padding: 10px;
+  margin: 30px;
+  margin-right: 0;
+  margin-top: 80px;
+} */
+
+.delete-btn {
+  margin: 50px;
+  margin-left: 0;
+}
+
+
+/*FIRST ROW
 #rowOne-btn {
   padding: 10px;
   margin: 30px;
@@ -48,7 +60,7 @@
   margin-left: 0px;
 }
 
-/*Second ROW-------------------*/
+/*Second ROW-----
 
 #rowTwo-btn {
   padding: 10px;
@@ -62,7 +74,7 @@
   margin: 50px;
   margin-left: 0px;
 }
-/*Third ROW-------------------*/
+/*Third ROW---------
 
 #rowThree-btn {
   padding: 10px;
@@ -77,8 +89,6 @@
   margin-left: 0px;
 }
 
-/*Fourth ROW-------------------*/
-
 #rowFour-btn {
   padding: 10px;
   margin: 30px;
@@ -90,4 +100,4 @@
   padding: 10px;
   margin: 50px;
   margin-left: 0px;
-}
+} */
