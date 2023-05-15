@@ -1,7 +1,7 @@
 $(document).ready(onReady);
 
 function onReady() {
-  
+
   // let generateBtn = $("#generate-btn");
 
   // let rowOneBtn = $("#rowOne-btn");
@@ -24,22 +24,24 @@ function onReady() {
 let rowCounter = 1;
 
 function generateRow() {
-  $("block").on("click", changeColor);
+ 
   $("#firstContainer").append(`
     <div class="row" data-row="${rowCounter}">
+    <section style="background-color: red")
       <p>Row ${rowCounter}</p>
       <button class="yellow-btn">Yellow</button>
       <button class="delete-btn">Delete</button>
-      $(.block).on("click", changeColor);
     </div>
-  `);
+   `);
   rowCounter++;
-  
+  console.log(generateRow);
 }
 // rowFourBtn
 
+  // $("block").on("click", changeColor);
 function changeColor() {
-  $(this).parent().addClass("red-fill");
+  $(this).parent().append("red-fill");
+  console.log(changeColor);
 }
 
 function deleteRow() {
