@@ -3,21 +3,32 @@
   margin: 30px;
 }
 
-
+#firstContainer,
+#secondContainer,
+#thirdContainer,
+#fourthContainer {
+  display: inline-block;
+  border: 2px solid black;
+  width: 80%;
+  height:106px;
+  padding: 10px;
+  margin: 22px;
+} /*end of containers•/
 /*------BLOCK------------*/
 
-#blocks {
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+/* #blocks {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .block {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin: 5px;
-}
+  background-color: yellow;
+} */
 
 .red-fill {
   background-color: red;

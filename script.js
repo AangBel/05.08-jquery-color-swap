@@ -6,6 +6,8 @@ function onReady() {
   $("#generate-btn").on("click", generateRow);
 } //end of onReady
 
+$('#generate-btn').on('click', )
+
 //When this function is called i want it to do...
 function generateRow(event) {
   const rowOneColorVar = $("#rowOne-btn");
@@ -15,8 +17,8 @@ function generateRow(event) {
 
 
 
-$("#rowOneColorVar").on("click", ".block", rowOneColorAppend );
-$("#rowOneColor").on("click", ".block", rowOneColorAppend);
+$("#rowOne-btn").on("click", ".block", rowOneColorAppend );
+// $("#rowTwoColor").on("click", ".block", rowOneColorAppend);
 $("#rowTwoColor").on("click", ".block", rowTwoColorAppend);
 $("#rowThreeColor").on("click", ".block", rowThreeColorAppend);
 $("#rowFourColor").on("click", ".block", rowFourColorAppend);
@@ -26,22 +28,22 @@ $("#rowFourColor").on("click", ".block", rowFourColorAppend);
  //---------------------------------------------------------------
 
 function rowOneColorAppend() {
-  $("#rowOneColor").append('<div class="block red-fill"></div>');
+  $("#firstContainer").append('<div class="block red-fill"></div>');
   // red++;
   // $('#red-count').append(red);
 }
 function rowTwoColorAppend() {
-  $("#rowTwoColor").append('<div class="block red-fill"></div>');
+  $("#secondContainer").append('<div class="block red-fill"></div>');
   // blue++;
   // blueCount();
 }
 function rowThreeColorAppend() {
-  $("#rowThreeColor").append('<div class="block red-fill"></div>');
+  $("#thirdContainer").append('<div class="block red-fill"></div>');
   // green++;
   // greenCount();
 }
 function rowFourColorAppend() {
-  $("#rowFourColor").append('<div class="block red-fill"></div>');
+  $("#fourthContainer").append('<div class="block red-fill"></div>');
   //     yellow++;
   //     yellowCount();
 }
