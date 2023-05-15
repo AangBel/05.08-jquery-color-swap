@@ -9,16 +9,25 @@ function onReady() {
   // let rowThreeBtn = $("#rowThree-btn");
   // let rowFourBtn = $("#rowFour-btn");
 
-  // let deleteBtn = $("#delete-btn");
+  $('#yellow-btn').on('click', change2Yellow);
 
   $("#generate-btn").on("click", generateRow);
 
-  $("#rowOne-btn").on("click", ".yellow-btn", changeColor);
-  $("#rowTwo-btn").on("click", ".yellow-btn", changeColor);
-  $("#rowThree-btn").on("click", ".yellow-btn", changeColor);
-  $("#rowFour-btn").on("click", ".yellow-btn", changeColor);
+  $("#rowOne-btn").on("click", changeColor);
+  $("#rowOne-btn").on("click", "#yellow-btn", change2Yellow);
 
-  $('#yellow-btn').on('click', change2Yellow);
+  $('#yellow-btn').on('click','#yellow-btn',change2Yellow);
+  $("#rowTwo-btn").on("click", "#yellow-btn", changeColor);
+
+
+  $("#rowOne-btn").on("click", "#yellow-btn", change2Yellow);
+  $("#rowThree-btn").on("click", "#yellow-btn", changeColor);
+
+
+  $("#rowOne-btn").on("click", "#yellow-btn", change2Yellow);
+  $("#rowFour-btn").on("click", "#yellow-btn", changeColor);
+
+  // $('#yellow-btn').on('click',".yellow-btn", change2Yellow);
   $("#container").on("click", ".delete-btn", deleteRow);
 }
 
@@ -28,14 +37,15 @@ function generateRow() {
 
   $("#firstContainer").append(`
     <div class="row" data-row="${rowCounter}">
-    <section style="background-color: red")
+    <section style="background-color: red">
       <p>${rowCounter}</p>
       <button id="yellow-btn">Yellow</button>
+      
       <button class="delete-btn">Delete</button>
     </div>
 `);
   rowCounter++;
-  console.log(generateRow);
+  
 }
 // rowFourBtn
 
@@ -46,9 +56,25 @@ function changeColor() {
 }
 
 function change2Yellow() {
-  $(this).parent().append("yellow-fill");
-  console.log(change2Yellow);
+  $(this).parent().append('yellow-fill');
+  // $(this).parent().css({backgroundColor: "yellow"})
 }
+// function change2Yellow() {
+//   $(this).parent().append("yellow-fill");
+//   console.log(change2Yellow);
+// }
+// function change2Yellow() {
+
+//   $("#firstContainer").append(`
+//     <div class="row" data-row="${rowCounter}">
+//     <section style="background-color: yellow")
+//       <p>${rowCounter}</p>
+//       <button id="yellow-btn">Yellow</button>
+//       <button class="delete-btn">Delete</button>
+//     </div>
+// `);
+// }
+
 function deleteRow() {
   $(this).parent().remove();
   rowCounter--;
